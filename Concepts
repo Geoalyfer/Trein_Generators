@@ -1,0 +1,10 @@
+def sequencia_infinita():
+    contador = 0
+    while True:
+        yield contador
+        contador += 1
+        yield f'O próximo número da sequência é: {contador}'
+
+contador_infinito = sequencia_infinita()
+
+next(contador_infinito)
